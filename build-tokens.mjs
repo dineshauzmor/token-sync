@@ -26,10 +26,10 @@ const setsToUse = ["auzmor1"];
 const excludes = [];
 
 const transformerOptions = {
-  expandTypography: true,
-  expandShadow: true,
-  expandComposition: true,
-  expandBorder: true,
+  expandTypography: false,
+  expandShadow: false,
+  expandComposition: false,
+  expandBorder: false,
   preserveRawValue: false,
   throwErrorWhenNotResolved: true,
   resolveReferences: true,
