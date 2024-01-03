@@ -5,3 +5,7 @@
 .btn-text {
   font: var(--textSmFontBold);
 } */
+
+.btn-red {
+  background-color: red;
+}
