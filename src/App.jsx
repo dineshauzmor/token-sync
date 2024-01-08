@@ -1,14 +1,16 @@
 import styled from "styled-components";
 import "./../build/css/variables.css";
-import "./index.css";
+
 import {Button, Input} from 'auzmorui'
+
+
 
 function App() {
   return (
     <>
-    <StyledButton className="btn-red ">
+    <Button className="bg-slate-500">
       <Text>I&apos;m a button</Text>
-    </StyledButton>
+    </Button>
     
       <Input />
       
@@ -19,9 +21,9 @@ function App() {
 export default App;
 
 const StyledButton = styled(Button)`
-  /* background-color: purple;
+  /* background-color: purple; */
   border-radius: var(--aldo2);
-  border: none; */
+  border: none;
 `;
 
 const Text = styled.span`
