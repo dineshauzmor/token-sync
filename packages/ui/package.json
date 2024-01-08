@@ -1,23 +1,34 @@
 {
-  "name": "token-sync",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "auzmorui",
+  "version": "1.0.0",
+  "description": "UI library for Auzmor",
+  
+  "files": [
+    "dist",
+    "src"
+  ],
+  "main": "dist/index.js",
+  "module": "src/index.js",
+
   "scripts": {
-    "dev": "node build-tokens.mjs && vite",
-    "build": "node build-tokens.mjs && vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "build": "vite build",
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
   },
+  "keywords": [
+    "react",
+    "ui",
+    "components"
+  ],
+  "author": "NSD",
+  "license": "MIT",
   "dependencies": {
     "@tokens-studio/sd-transforms": "^0.12.2",
-    "auzmorui": "file:packages/ui",
     "clsx": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "style-dictionary": "^3.9.1",
     "styled-components": "^6.1.1",
-    "tailwind-merge": "^2.2.0",
     "token-transformer": "^0.0.33"
   },
   "devDependencies": {
@@ -32,5 +43,12 @@
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
     "vite": "^5.0.8"
-  }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
+    "last 1 version"
+  ]
 }

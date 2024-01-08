@@ -1,12 +1,12 @@
 import { clsx } from "clsx";
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import PropTypes from "prop-types";
 
 import classes from "./Button.module.css";
 
-export const Button = forwardRef(
+const Button = forwardRef(
   (
-    { children, type = "button", className, as: Component = "button", ...rest },
+    { children, type = "button", className, as: Component = "button",  ...rest },
     ref
   ) => (
     <Component
@@ -20,6 +20,8 @@ export const Button = forwardRef(
   )
 );
 
+export default Button;
+
 Button.displayName = "Button";
 
 Button.propTypes = {
@@ -29,7 +31,7 @@ Button.propTypes = {
   size: PropTypes.string,
   fullWidth: PropTypes.boolean,
   iconPlacement: PropTypes.string,
-  icon: React.ReactNode,
+  icon: PropTypes.node,
   type: PropTypes.string,
   className: PropTypes.string,
   as: PropTypes.string,

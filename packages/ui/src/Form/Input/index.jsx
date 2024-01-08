@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import classes from "./Input.module.css";
 
-export const Input = forwardRef(
+const Input = forwardRef(
   (
     { type = "text", className, as: Component = "input", ...rest },
     ref
@@ -18,6 +18,8 @@ export const Input = forwardRef(
   )
 );
 
+
+export default Input
 Input.displayName = "Input";
 
 Input.propTypes = {
