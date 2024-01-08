@@ -1,32 +1,45 @@
-import styled from "styled-components";
-import "./../build/css/variables.css";
-
-import {Button, Input} from 'auzmorui'
-
-
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Learn from "./routes/learn";
+import Office from "./routes/office";
+import Ats from "./routes/ats";
 
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <div>Design System POC</div>,
+    },
+    {
+      path: "/learn",
+      element: <Learn />,
+    },
+    {
+      path: "/office",
+      element: <Office />,
+    },
+    {
+      path: "/ats",
+      element: <Ats />,
+    },
+  ]);
   return (
-    <>
-    <Button className="bg-slate-500">
-      <Text>I&apos;m a button</Text>
-    </Button>
-    
-      <Input />
-      
-    </>
+      <RouterProvider router={router} />
   );
 }
 
 export default App;
 
-const StyledButton = styled(Button)`
-  /* background-color: purple; */
-  border-radius: var(--aldo2);
-  border: none;
-`;
+// const StyledButton = styled(Button)`
+//   /* background-color: purple; */
+//   border-radius: var(--aldo2);
+//   border: none;
+// `;
 
-const Text = styled.span`
-  font: var(--textBaseFontMedium);
-  color: var(--colorsBaseWhite);
-`;
+// const Text = styled.span`
+//   font: var(--textBaseFontMedium);
+//   color: var(--colorsBaseWhite);
+// `;
