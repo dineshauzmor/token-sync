@@ -6,7 +6,7 @@ import classes from "./Button.module.css";
 
 const Button = forwardRef(
   (
-    { children, type = "button", className, as: Component = "button",  ...rest },
+    { children, type = "button", className, as: Component = "button", ...rest },
     ref
   ) => (
     <Component

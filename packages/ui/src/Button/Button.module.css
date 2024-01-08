@@ -1,5 +1,7 @@
 .button {
   background-color: var(--colorsPrimary950);
-  border-radius: 6px;
-  border: 1px solid;
+  border-radius: var(--aldo2);
+  font: var(--textBaseFontMedium);
+  border: none;
+  color: var(--colorsBaseWhite);
 }

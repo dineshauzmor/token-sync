@@ -1,13 +1,9 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Learn from "./routes/learn";
 import Office from "./routes/office";
 import Ats from "./routes/ats";
 
 function App() {
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -26,9 +22,7 @@ function App() {
       element: <Ats />,
     },
   ]);
-  return (
-      <RouterProvider router={router} />
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

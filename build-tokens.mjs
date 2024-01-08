@@ -21,49 +21,55 @@ const jsonFilePath = "./tokens/tokens.json"; // Adjust the path based on your pr
 
 // Read and print the JSON file content
 const jsonData = readJsonFile(jsonFilePath);
+const brands = ["auzmor1", "office"];
 
-const setsToUse = ["auzmor1"];
-const excludes = [];
+brands.forEach((brand) => {
+  const setsToUse = [brand];
+  const excludes = [];
 
-const transformerOptions = {
-  expandTypography: false,
-  expandShadow: false,
-  expandComposition: false,
-  expandBorder: false,
-  preserveRawValue: false,
-  throwErrorWhenNotResolved: true,
-  resolveReferences: true,
-};
+  const transformerOptions = {
+    expandTypography: false,
+    expandShadow: false,
+    expandComposition: false,
+    expandBorder: false,
+    preserveRawValue: false,
+    throwErrorWhenNotResolved: true,
+    resolveReferences: true,
+  };
 
-const resolved = transformTokens(
-  jsonData,
-  setsToUse,
-  excludes,
-  transformerOptions
-);
+  const resolved = transformTokens(
+    jsonData,
+    setsToUse,
+    excludes,
+    transformerOptions
+  );
 
-// Write transformed tokens to a temporary JSON file
-const tempFilePath = "./tokens/resolved-tokens.json";
-fs.writeFileSync(tempFilePath, JSON.stringify(resolved));
+  const tempFilePath = "./tokens/resolved-tokens.json";
+  fs.writeFileSync(tempFilePath, JSON.stringify(resolved));
 
-const sd = StyleDictionary.extend({
-  source: [tempFilePath], // Use the temporary JSON file as the source
-  platforms: {
-    css: {
-      transformGroup: "tokens-studio",
-      buildPath: "build/css/",
-      files: [
-        {
-          destination: "variables.css",
-          format: "css/variables",
-        },
-      ],
+  // Write transformed tokens to a brand-specific CSS file
+  const cssFilePath = `./build/css/variables-${brand}.css`;
+  const sd = StyleDictionary.extend({
+    source: [tempFilePath],
+    platforms: {
+      css: {
+        transformGroup: "tokens-studio",
+        buildPath: "./build/css/",
+        files: [
+          {
+            destination: `variables-${brand}.css`,
+            format: "css/variables",
+          },
+        ],
+      },
     },
-  },
+  });
+
+  sd.cleanAllPlatforms();
+  sd.buildAllPlatforms();
+
+  fs.unlinkSync(tempFilePath);
+  console.log(`CSS file generated for ${brand}: ${cssFilePath}`);
 });
 
-sd.cleanAllPlatforms();
-sd.buildAllPlatforms();
-
 // Cleanup: Delete the temporary JSON file
-fs.unlinkSync(tempFilePath);
