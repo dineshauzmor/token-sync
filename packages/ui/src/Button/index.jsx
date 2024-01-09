@@ -26,23 +26,12 @@ Button.displayName = "Button";
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  color: PropTypes.string,
-  variant: PropTypes.string,
-  size: PropTypes.string,
-  fullWidth: PropTypes.boolean,
-  iconPlacement: PropTypes.string,
-  icon: PropTypes.node,
   type: PropTypes.string,
   className: PropTypes.string,
   as: PropTypes.string,
 };
 
 Button.defaultProps = {
-  color: "first",
-  variant: "primary",
-  size: "medium",
-  fullWidth: false,
-  iconPlacement: "left",
   type: "button",
   className: "",
   as: "button",
