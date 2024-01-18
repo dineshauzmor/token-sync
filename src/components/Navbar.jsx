@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Navbar() {
@@ -6,12 +6,22 @@ export default function Navbar() {
     <>
       <NavbarWrapper>
         <div className="text-lg font-medium">Design System</div>
-        <Link className="text-lg cursor-pointer" to="/learn">
+        <div
+          className="text-lg cursor-pointer"
+          onClick={() => {
+            window.location.href = "/learn";
+          }}
+        >
           Learn
-        </Link>
-        <Link className="text-lg cursor-pointer" to="/office">
+        </div>
+        <div
+          className="text-lg cursor-pointer"
+          onClick={() => {
+            window.location.href = "/office";
+          }}
+        >
           Office
-        </Link>
+        </div>
       </NavbarWrapper>
       <Outlet />
     </>

@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Learn from "./routes/learn";
-import Office from "./routes/office";
+import { lazy, Suspense } from "react";
+const Learn = lazy(() => import("./routes/learn"));
+const Office = lazy(() => import("./routes/office"));
 import Ats from "./routes/ats";
 import Navbar from "./components/Navbar";
 
@@ -29,7 +30,11 @@ function App() {
       ],
     },
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <Suspense>
+      <RouterProvider router={router} />
+    </Suspense>
+  );
 }
 
 export default App;

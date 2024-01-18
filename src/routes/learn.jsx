@@ -1,15 +1,11 @@
-import { Button, ThemeProvider } from "auzmorui";
-import useStyles from "../hooks/useStyles";
-import { useState } from "react";
+import { Button } from "@auzmor-test/ui";
+import "@auzmor-test/design-tokens/brand/auzmor/tokens.css";
 
 const Learn = () => {
-  useStyles("variables-auzmor1");
-  const [primaryColor, setPrimaryColor] = useState("");
-
   return (
-    <ThemeProvider primaryColor={primaryColor}>
-      <Button onClick={() => setPrimaryColor("#000")}>I am Learn</Button>
-    </ThemeProvider>
+    <>
+      <Button>I am Learn</Button>
+    </>
   );
 };
 

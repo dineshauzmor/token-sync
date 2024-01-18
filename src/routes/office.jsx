@@ -1,8 +1,7 @@
-import { Button } from "auzmorui";
-import useStyles from "../hooks/useStyles";
+import { Button } from "@auzmor-test/ui";
+import "@auzmor-test/design-tokens/brand/office/tokens.css";
 
 const Office = () => {
-  useStyles("variables-office");
   return (
     <div>
       <Button>I am Office</Button>
