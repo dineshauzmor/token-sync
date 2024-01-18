@@ -3,9 +3,9 @@ import "@auzmor-test/design-tokens/brand/auzmor/tokens.css";
 
 const Learn = () => {
   return (
-    <>
+    <div style={{ padding: "20px" }}>
       <Button>I am Learn</Button>
-    </>
+    </div>
   );
 };
 

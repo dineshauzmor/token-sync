@@ -3,7 +3,7 @@ import "@auzmor-test/design-tokens/brand/office/tokens.css";
 
 const Office = () => {
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
       <Button>I am Office</Button>
     </div>
   );
