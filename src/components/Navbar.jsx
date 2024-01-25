@@ -34,6 +34,5 @@ const NavbarWrapper = styled.nav`
   gap: 10px;
   padding: 10px;
   color: white;
-  margin-bottom: 20px;
   align-items: center;
 `;

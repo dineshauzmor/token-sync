@@ -6,8 +6,8 @@ const Office = () => {
     <div style={{ padding: "20px" }}>
       <h1 className="text-6xl font-semibold mb-8">Auzmor Office</h1>
       <div className="flex gap-3">
-        <Button className="">Office Outline Button</Button>
-        <Button variant="normal" className="">Office Normal Button</Button>
+        <Button variant="outline">Office Outline Button</Button>
+        <Button>Office Normal Button</Button>
       </div>
     </div>
   );

@@ -4,14 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node build-tokens.mjs && vite",
-    "build": "node build-tokens.mjs && vite build",
+    "dev": "vite",
+    "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "@shubh-test/design-tokens": "latest",
-    "@shubh-test/ui": "^0.1.4",
+    "@shubh-test/ui": "^0.1.13",
     "@tokens-studio/sd-transforms": "^0.12.2",
     "auzmorui": "file:packages/ui",
     "clsx": "^2.1.0",
