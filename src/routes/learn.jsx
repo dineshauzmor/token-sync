@@ -73,7 +73,7 @@ const Learn = () => {
             as="div"
             variant="primary"
             size="lg"
-            weight="bold"
+            weight="medium"
           >
             Sign In
           </Text>
@@ -146,6 +146,7 @@ const Wrapper = styled.div`
     object-fit: cover;
     height: 100%;
   }
+  font-family: Inter;
 `;
 const StyledForm = styled.form`
   height: 100%;
