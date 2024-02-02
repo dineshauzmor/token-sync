@@ -32,7 +32,7 @@ function App() {
   ]);
   return (
     <Suspense>
-      <RouterProvider router={router} />
+        <RouterProvider router={router} />
     </Suspense>
   );
 }

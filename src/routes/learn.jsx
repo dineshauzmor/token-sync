@@ -1,7 +1,12 @@
+import React from "react"
 import { Button, Input, Text } from "@auzmor-test/ui";
 import styled from "styled-components";
 import "@auzmor-test/design-tokens/brand/learn/tokens.css";
+import useTheme from "./useTheme";
 const Learn = () => {
+  const [currentColor, setCurrentColor] = React.useState("#ff0000");
+
+  useTheme({primaryColor: currentColor})
   return (
     <Wrapper>
       <video
@@ -14,7 +19,8 @@ const Learn = () => {
         muted
       />
       <StyledForm>
-        <div style={{}}>
+        <div>
+        <input type="color" id="favcolor" name="favcolor" onChange={(e) => setCurrentColor(e.target.value)} value={currentColor} />
           <svg
             width="55px"
             height="55px"
