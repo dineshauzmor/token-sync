@@ -130,6 +130,39 @@ const Learn = () => {
                 Sign in with SSO
               </Text>
             </Button>
+            <StyledButton>
+              50
+            </StyledButton>
+            <StyledButton color={100}>
+              100
+            </StyledButton>
+            <StyledButton color={200}>
+              200
+            </StyledButton>
+            <StyledButton color={300}>
+              300
+            </StyledButton>
+            <StyledButton color={400}>
+              400
+            </StyledButton>
+            <StyledButton color={500}>
+              500
+            </StyledButton>
+            <StyledButton color={600}>
+              600
+            </StyledButton>
+            <StyledButton color={700}>
+              700
+            </StyledButton>
+            <StyledButton color={800}>
+              800
+            </StyledButton>
+            <StyledButton color={900}>
+              900
+            </StyledButton>
+            <StyledButton color={950}>
+              950
+            </StyledButton>
           </div>
         </div>
       </StyledForm>
@@ -161,4 +194,9 @@ const StyledForm = styled.form`
   width: 100%;
   max-width: 500px;
   justify-self: center;
+`;
+
+const StyledButton = styled(Button)`
+  background-color: ${({color = 50}) => `var(--colorsPrimary${color})`};
+
 `;

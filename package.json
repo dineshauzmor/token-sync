@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@auzmor-test/design-tokens": "^0.1.15",
-    "@auzmor-test/ui": "^0.1.21",
+    "@auzmor-test/design-tokens": "^0.1.24",
+    "@auzmor-test/ui": "^0.1.28",
     "@tokens-studio/sd-transforms": "^0.12.2",
     "clsx": "^2.1.0",
     "react": "^18.2.0",
