@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <>
       <NavbarWrapper>
-        <div className="flex gap-3 w-full">
+        <div className="flex gap-3 flex-1">
 
         <div className="text-lg font-medium">Design System</div>
         <div
