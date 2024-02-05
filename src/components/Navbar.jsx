@@ -33,7 +33,7 @@ export default function Navbar() {
         </div>
 
         <div className="cursor-pointer self-end text-lg flex gap-2">
-          Branding: 
+          Primary Color: 
         <input
           type="color"
           id="favcolor"
