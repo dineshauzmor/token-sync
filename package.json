@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@auzmor-test/design-tokens": "^0.1.15",
-    "@auzmor-test/ui": "^0.1.20",
+    "@auzmor-test/ui": "^0.1.21",
     "@tokens-studio/sd-transforms": "^0.12.2",
     "clsx": "^2.1.0",
     "react": "^18.2.0",
